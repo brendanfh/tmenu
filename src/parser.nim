@@ -3,18 +3,18 @@ import os
 import strutils
 
 type
-  ParserArgs = ref object
-    t: string
-    start_dir: string
-    height: uint
-    layout: string
-    incremental: bool
-    exact: bool
-    sort: bool
-    case_sensitive: bool
-    multi_select: bool
-    preview: string
-    input: string
+  ParserArgs* = ref object
+    t*: string
+    start_dir*: string
+    height*: uint
+    layout*: string
+    incremental*: bool
+    exact*: bool
+    sort*: bool
+    case_sensitive*: bool
+    multi_select*: bool
+    preview*: string
+    input*: string
 
 let doc = """
 tmenu
