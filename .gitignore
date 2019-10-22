@@ -1,5 +1,2 @@
 .projector.yml
 tmenu
-
-# ignore projector (my custom project manager) configuration files
-.projector.yml
