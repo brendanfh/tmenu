@@ -13,3 +13,4 @@ bin           = @["tmenu"]
 
 requires "nim >= 1.0.0"
 requires "illwill >= 0.1.0"
+requires "docopt >= 0.6.8"

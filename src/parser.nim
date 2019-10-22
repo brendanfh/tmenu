@@ -81,8 +81,6 @@ proc readArgs*(): ParserArgs =
     exact: exact,
     sort: sort,
     incremental: incremental,
-    exact: exact,
-    sort: sort,
     case_sensitive: case_sensitive,
     multi_select: multi_select,
     preview: preview,
