@@ -67,7 +67,7 @@ proc readArgs*(): ParserArgs =
     try:
       height = parseUint($args["--height"])
     except ValueError:
-      echo "--height=<h> must be a integer"
+      echo "--height=<h> must be an unsigned integer"
       quit(QuitFailure)
   if args["--layout"]:
     doAssert $args["--layout"] in ["default", "reverse", "reverse-list"]
