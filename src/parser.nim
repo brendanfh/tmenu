@@ -41,7 +41,7 @@ proc readArgs*(): ParserArgs =
   var
     t = "default"
     start_dir = getCurrentDir()
-    height = 0 as uint
+    height: uint = 0
     layout = "default"
     incremental = args["--incremental"]
     exact = args["--exact"]
@@ -65,7 +65,7 @@ proc readArgs*(): ParserArgs =
     start_dir = $args["--start-dir"]
   if args["--height"]:
     try:
-      height = parseInt($args["--height"])
+      height = parseUint($args["--height"])
     except ValueError:
       echo "--height=<h> must be a integer"
       quit(QuitFailure)
@@ -78,7 +78,6 @@ proc readArgs*(): ParserArgs =
     start_dir: start_dir,
     height: height,
     layout: layout,
-    incremental: incremental,
     exact: exact,
     sort: sort,
     incremental: incremental,
