@@ -17,8 +17,7 @@ when isMainModule:
   tb.drawHorizLine(2, 38, 3, doubleStyle=true)
 
   tb.write(2, 1, fgWhite, "Press any key to display its name")
-  tb.write(2, 2, "Press ", fgYellow, "ESC", fgWhite,
-                 " or ", fgYellow, "Q", fgWhite, " to quit")
+  tb.write(2, 2, "Press ", fgYellow, "ESC", fgWhite, " or ", fgYellow, "Q", fgWhite, " to quit")
 
   while true:
     var bb = newBoxBuffer(tb.width, tb.height)
