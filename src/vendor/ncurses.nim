@@ -234,7 +234,7 @@ proc assume_default_colors*(fg, bg: cint): ErrCode {.cdecl, importc, discardable
 const
   u1: uint = 1
   A_NORMAL*      = 0.uint
-  A_ATTRIBUTES*  = NCURSES_BITS(not 0,  0)
+  A_ATTRIBUTES*  = NCURSES_BITS(not 0.chtype,  0)
   A_CHAR_TEXT*   = (NCURSES_BITS(u1, 0) - u1.chtype)
   A_COLOR*       = NCURSES_BITS((u1 shl 8) - u1, 0)
   A_STANDOUT*    = NCURSES_BITS(u1,  8)
