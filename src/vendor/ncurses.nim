@@ -1,3 +1,5 @@
+# FULL CREDIT TO https://github.com/nrowley
+# HAD TO CHANGE LINES 236 AND 237 TO GET IT TO COMPILE
 {.deadCodeElim: on.}
 when defined(windows):
   const libncurses* = "libncurses.dll"
