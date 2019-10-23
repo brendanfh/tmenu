@@ -5,7 +5,6 @@ import strutils
 type
   ParserArgs* = ref object
     t*: string
-    start_dir*: string
     height*: uint
     layout*: string
     incremental*: bool
@@ -20,12 +19,11 @@ let doc = """
 tmenu
 
 Usage:
-  tmenu [--type=<t>] [--height=<h>] [--start-dir=<sd>] [--layout=<lay>] [--incremental] [--exact] [+s|--no-sort] [+i] [--multi|--multi-select] [--preview=<prev_cmd>]
+  tmenu [--type=<t>] [--height=<h>] [--layout=<lay>] [--incremental] [--exact] [+s|--no-sort] [+i] [--multi|--multi-select] [--preview=<prev_cmd>] [--bind=<bindings>] [--delimiter=<del>] [+x|--no-extended]
 
 Options:
   --type=(default|d|dir|f|file)
   --height=<h>
-  --start-dir=<sd>
   --layout=(default|reverse|reverse-list)
   --incremental
   --exact
@@ -33,6 +31,19 @@ Options:
   +i
   --multi --multi-select
   --preview=<prev_cmd>
+  --bind=<bindings>
+  +x --no-extended
+  --delimiter=<del>
+
+Bindings:
+  FORMAT:
+    key:action1+action2;key2:action3
+
+  keys:
+    backspace
+    enter
+    delete
+    
 
 """
 
